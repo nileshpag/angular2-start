@@ -1,0 +1,8 @@
+<h1>Hello {{name}}</h1>
+<a routerLink="/home">Home</a>
+<a routerLink="/about">About</a>
+<router-outlet></router-outlet>
+<div *ngIf="empList.length>0">
+    <span>Emplyee List</span>
+    <div *ngFor="let emp of empList">{{emp.first_name}}</div>
+</div>
