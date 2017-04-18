@@ -7,9 +7,10 @@ import {HomeComponent} from './home/home.component';
 import { routing } from './app.routing';
 import { HttpModule } from '@angular/http';
 import {FormsModule} from "@angular/forms";
+import {EmpDetailsComponent} from './empdetails/empdetails.component';
 @NgModule({
   imports:      [ BrowserModule ,routing,HttpModule,FormsModule],
-  declarations: [ AppComponent ,AboutComponent, HomeComponent],
+  declarations: [ AppComponent ,AboutComponent, HomeComponent,EmpDetailsComponent],
   bootstrap:    [ AppComponent ],
   providers:[DemoService]
 })

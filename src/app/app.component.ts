@@ -8,6 +8,7 @@ import {Observable} from 'rxjs/Rx';
 export class AppComponent  { 
   name = 'Angular'; 
   empList:any[]=[];
+  empId:number = undefined;
   user:any={
     name:"",
     password:""
@@ -29,5 +30,9 @@ export class AppComponent  {
 
   onSubmitTemplateBased(){
     console.log(this.user);
+  }
+  showDetails(id:any){
+    alert(id);
+    this.empId = id;
   }
 }

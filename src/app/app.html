@@ -4,7 +4,7 @@
 <router-outlet></router-outlet>
 <div *ngIf="empList.length>0">
     <span>Emplyee List</span>
-    <div *ngFor="let emp of empList">{{emp.first_name}}</div>
+    <div *ngFor="let emp of empList"><a href="#" (click)="showDetails(emp.id)">{{emp.first_name}}</a></div>
 </div>
 <h1>Template-driven Form Example:</h1>
     <form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()">
@@ -22,3 +22,4 @@
             <button type="submit" [disabled]="!f.valid">Submit</button>
         </p>
 </form>
+<emp-details [id]="empId"></emp-details>

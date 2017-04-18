@@ -13,5 +13,8 @@ export class DemoService {
     getEmployeeList() {
         return this.http.get('http://localhost:5000/api/users?page=2').map((res:Response) => res.json());
     }
+    getEmployeeDetails(id:any) {
+        return this.http.get('http://localhost:5000/api/users/'+ Number(id)).map((res:Response) => res.json());
+    }
 
 }
