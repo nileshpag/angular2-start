@@ -8,6 +8,10 @@ import {Observable} from 'rxjs/Rx';
 export class AppComponent  { 
   name = 'Angular'; 
   empList:any[]=[];
+  user:any={
+    name:"",
+    password:""
+  }
   constructor(private _demoService: DemoService) { }
 
   ngOnInit() {
@@ -21,5 +25,9 @@ export class AppComponent  {
       // the third argument is a function which runs on completion
       () => console.log('done loading list')
     )
+  }
+
+  onSubmitTemplateBased(){
+    console.log(this.user);
   }
 }
