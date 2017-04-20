@@ -8,11 +8,7 @@ import {Observable} from 'rxjs/Rx';
 export class AppComponent  { 
   name = 'Angular'; 
   empList:any[]=[];
-  empId:number = undefined;
-  user:any={
-    name:"",
-    password:""
-  }
+  empId:number = undefined;  
   constructor(private _demoService: DemoService) { }
 
   ngOnInit() {
@@ -27,12 +23,12 @@ export class AppComponent  {
       () => console.log('done loading list')
     )
   }
-
-  onSubmitTemplateBased(){
-    console.log(this.user);
-  }
+  
   showDetails(id:any){
-    alert(id);
     this.empId = id;
+  }
+
+  addEmp(event:any){
+    this.empList.push(event);
   }
 }

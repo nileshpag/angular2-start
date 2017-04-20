@@ -1,0 +1,17 @@
+<div>add</div>
+<h1>Template-driven Form Example:</h1>
+    <form #f="ngForm" (ngSubmit)="onAddEmp()">
+        <p>
+            <label>First Name:</label>
+            <input type="text"  
+                [(ngModel)]="user.first_name" name="firstname" required>
+        </p>
+        <p>
+            <label>Last Name:</label>
+            <input type="text"  
+                [(ngModel)]="user.last_name" name="lastname" required>
+        </p>
+        <p>
+            <button type="submit" [disabled]="!f.valid">Submit</button>
+        </p>
+</form>

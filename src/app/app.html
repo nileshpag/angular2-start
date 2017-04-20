@@ -6,20 +6,5 @@
     <span>Emplyee List</span>
     <div *ngFor="let emp of empList"><a href="#" (click)="showDetails(emp.id)">{{emp.first_name}}</a></div>
 </div>
-<h1>Template-driven Form Example:</h1>
-    <form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()">
-        <p>
-            <label>First Name:</label>
-            <input type="text"  
-                [(ngModel)]="user.name" name="name" required>
-        </p>
-        <p>
-            <label>Password:</label>
-            <input type="password"  
-                [(ngModel)]="user.password" name="password" required>
-        </p>
-        <p>
-            <button type="submit" [disabled]="!f.valid">Submit</button>
-        </p>
-</form>
 <emp-details [id]="empId"></emp-details>
+<add-emp (addEmp)="addEmp($event)"></add-emp>
