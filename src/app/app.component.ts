@@ -7,6 +7,7 @@ import {Observable} from 'rxjs/Rx';
 })
 export class AppComponent  { 
   name = 'Angular'; 
+  myname:string = "Nilesh";
   empList:any[]=[];
   empId:number = undefined;  
   constructor(private _demoService: DemoService) { }

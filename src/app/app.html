@@ -8,5 +8,7 @@
     <div *ngFor="let emp of empList"><a href="#" (click)="showDetails(emp.id)">{{emp.first_name}}</a></div>
 </div>
 <button (click)="announce()">annouce</button>
+<input type="text"  [(ngModel)]="myname">
+<span>{{myname}}</span>
 <emp-details [id]="empId"></emp-details>
 <add-emp (addEmp)="addEmp($event)"></add-emp>

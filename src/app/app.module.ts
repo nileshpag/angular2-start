@@ -9,8 +9,9 @@ import { HttpModule } from '@angular/http';
 import {FormsModule} from "@angular/forms";
 import {EmpDetailsComponent} from './empdetails/empdetails.component';
 import {AddEmpComponent} from './add-emp/addemp.component';
+import {SharedModule} from './shared/shared.module';
 @NgModule({
-  imports:      [ BrowserModule ,routing,HttpModule,FormsModule],
+  imports:      [ BrowserModule ,routing,HttpModule,FormsModule,SharedModule],
   declarations: [ AppComponent ,AboutComponent, HomeComponent,EmpDetailsComponent,AddEmpComponent],
   bootstrap:    [ AppComponent ],
   providers:[DemoService]
